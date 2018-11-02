@@ -53,7 +53,7 @@ get_header(); ?>
 								<?php endwhile; ?>
 								<?php else : ?>
 
-                                    <p>Atsiprasome rezultatu nerasta</p>
+                                    <p>Atsiprašome rezultatų nerasta</p>
 
 								<?php endif; wp_reset_query(); ?>
 
