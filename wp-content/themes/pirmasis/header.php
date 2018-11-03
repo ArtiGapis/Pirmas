@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-sm-10">
                     <nav class="navbar navbar-default pull-right" role="navigation">
-                        <div class="header-title-post"><?php the_title(); ?></div>
+                        <div class="header-title-post"><marquee behavior="scroll" direction="left"><?php the_title(); ?></marquee></div>
                     </nav>
                 </div>
             </div>

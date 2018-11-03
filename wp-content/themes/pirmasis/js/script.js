@@ -3,9 +3,6 @@ jQuery( document ).ready(function() {
 });
 
 
-
-
-
 // cssmenu Small mobile menu
 ( function( $ ) {
     $( document ).ready(function() {

@@ -5,7 +5,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        Small text for footerdfskjsadlfhsaljdkhflskjdflhksadgfkhsadgfkhsadgflhasdglhfsgadlhkfsadlkjfsd
+                        Small text for footer
                     </div>
                 </div>
             </div>
