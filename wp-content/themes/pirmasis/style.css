@@ -10,14 +10,6 @@ Author URI:
 #wrap-page {
   width: 100%;
 }
-.left {
-  width: 50%;
-  float: left;
-}
-.right {
-  width: 50%;
-  float: right;
-}
 /* hederis */
 .header-title-post{
   font-size: 40px;

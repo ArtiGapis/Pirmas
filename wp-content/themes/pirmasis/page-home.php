@@ -28,7 +28,6 @@ get_header(); ?>
 				<ul id="%1$s" class="%2$s">%3$s</ul>',
 	) );
 	?>
-
 	<div id="main-content" class="visual-container">
 		<div class="container">
 			<div class="row">
@@ -37,12 +36,10 @@ get_header(); ?>
 						<?php get_sidebar(); ?>
                     </div>
                 </div>
-
                 <div class="col-md-10 container-white">
 					<div class="rte">
                         <div id="wrap-page">
-                            <div class="left">
-
+                            <div class="post-wrap">
 								<?php query_posts(array('post_type' => 'post','orderby' => 'date'));
 								if(have_posts()) : while(have_posts()) : the_post(); ?>
 
@@ -51,19 +48,23 @@ get_header(); ?>
 									<?php the_content(); ?>
 
 								<?php endwhile; ?>
+
 								<?php else : ?>
 
                                     <p>Atsiprašome rezultatų nerasta</p>
 
 								<?php endif; wp_reset_query(); ?>
 
+                                <?php if ( comments_open() || get_comments_number() ) :
+                                comments_template();
+                                endif; ?>
                             </div>
                         </div>
                     </div>
+                </div>
 			</div>
 		</div>
 	</div>
-				
 			<?php endwhile; endif; ?>
 
 <?php get_footer(); ?>
