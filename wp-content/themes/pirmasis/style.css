@@ -5,6 +5,46 @@ Version: 1.0
 Author: Arturas Danilevicius
 Author URI:
 */
+/* contact */
+.name-wraper input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required, .name-wraper input.wpcf7-form-control.wpcf7-text {
+  background: none;
+  border: 2px solid white; }
+
+.massage-wraper label, .massage-wraper textarea.wpcf7-form-control.wpcf7-textarea {
+  width: 100%;
+  background: none; }
+
+.massage-wraper textarea.wpcf7-form-control.wpcf7-textarea {
+  border: 2px solid white; }
+
+.submit-wraper input.wpcf7-form-control.wpcf7-submit {
+  width: 15%;
+  margin-bottom: 10px; }
+
+.col-md-10.container-white {
+  padding: 20px; }
+
+/* owl-carousel */
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel button.owl-dot {
+  background-color: rgba(255, 255, 255, 0.42); }
+
+.owl-carousel .owl-item img {
+  display: block;
+  width: 50%;
+  margin-left: calc( 50% - 250px);
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.owl-nav {
+  position: absolute;
+  top: 50%;
+  width: 100%; }
+
+.bekas1 {
+  background-image: url("images/bekas1.jpg"); }
+
 /* GLOBAL PAGE STYLES */
 body {
   background-image: url("images/bekas1.jpg");
@@ -14,7 +54,7 @@ body {
   background-color: #b3b3b3;
   border: 1px solid black;
   border-radius: 10px;
-  margin-top: 60px; }
+  margin-top: 20px; }
 
 footer {
   background: #000;
@@ -36,26 +76,35 @@ nav {
 
 /* hederis */
 .header-title-post {
-  font-size: 40px;
+  font-size: 45px;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-weight: bold;
   font-style: italic;
-  color: #a3a3a3; }
+  color: #a3a3a3;
+  height: 50px;
+  background-color: #b3b3b3; }
+
+nav.navbar.navbar-default.pull-right {
+  margin-top: 20px; }
 
 /*sub meniu css*/
 .sub-menu {
-  background: rgba(110, 110, 110, 0.52);
+  background: white;
   min-width: 130px;
   padding: 15px;
   display: none;
   z-index: 10;
   list-style-type: none; }
 
+.show-desctop {
+  background-color: #b3b3b3; }
+
 .sidebar-wraper {
   margin-bottom: 102px; }
 
 .navbar-default .navbar-nav > li:hover .sub-menu {
-  display: block; }
+  display: block;
+  background-color: #b3b3b3; }
 
 /*mobile*/
 @media screen and (max-width: 768px) {
@@ -156,7 +205,7 @@ nav {
   #cssmenu > ul > li > a:hover > span::after,
   #cssmenu > ul > li.active > a > span::after,
   #cssmenu > ul > li.open > a > span::after {
-    border-color: #eeeeee; }
+    border-color: #b3b3b3; }
 
   .holder::before {
     top: 18px;
@@ -213,8 +262,8 @@ nav {
     right: 20px;
     z-index: 10;
     top: 11.5px;
-    border-top: 2px solid #eeeeee;
-    border-left: 2px solid #eeeeee;
+    border-top: 2px solid #b3b3b3;
+    border-left: 2px solid #b3b3b3;
     -webkit-transform: rotate(-135deg);
     -moz-transform: rotate(-135deg);
     -ms-transform: rotate(-135deg);
@@ -224,7 +273,17 @@ nav {
   #cssmenu ul ul li.active > a::after,
   #cssmenu ul ul li.open > a::after,
   #cssmenu ul ul li > a:hover::after {
-    border-color: #ffffff; } }
+    border-color: #b3b3b3; } }
+.navbar-default .navbar-nav > li > a {
+  color: black; }
+
+@media screen and (max-width: 992px) {
+  .sub-menu {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.52); }
+
+  .container-white {
+    margin-top: 80px; } }
 @media screen and (max-width: 768px) {
   .show-desctop {
     display: none !important; }

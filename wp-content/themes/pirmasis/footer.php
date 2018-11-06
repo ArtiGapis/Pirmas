@@ -9,6 +9,8 @@
                     </div>
                 </div>
             </div>
+            <script src="<?php bloginfo('template_directory'); ?>/js/jquery-3.3.1.min.js"></script>
+            <script src="<?php bloginfo('template_directory'); ?>/js/owl.carousel.js"></script>
         </footer>
 
 	</body>

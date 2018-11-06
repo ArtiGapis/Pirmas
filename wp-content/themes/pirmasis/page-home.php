@@ -3,7 +3,7 @@ Template Name: Homepage
 Description: A Page Template for custom page.
 */
 get_header(); ?>
-
+<?php if(have_posts()) : while(have_posts()) : the_post(); ?>
 
 
 	<div id="main-content" class="visual-container">
@@ -18,20 +18,13 @@ get_header(); ?>
 					<div class="rte">
                         <div id="wrap-page">
                             <div class="post-wrap">
-								<?php query_posts(array('post_type' => 'post','orderby' => 'date'));
-								if(have_posts()) : while(have_posts()) :the_post();?>
-
-
-                                    <h3><?php the_title(); ?></h3>
-									<?php  the_content();  ?>
-
-
-								<?php endwhile;?>
-
-								<?php else : ?>
-
-								<?php endif; wp_reset_query();?>
-	                            <?php comments_template();?>
+                                <div class="rte">
+                                    <div class="owl-carousel owl-theme">
+                                        <div class="item"><img src="<?php bloginfo('template_directory'); ?>/images/bekas1.jpg"></div>
+                                        <div class="item"><img src="<?php bloginfo('template_directory'); ?>/images/bekas2.jpg"></div>
+                                    </div>
+		                            <?php the_content(); ?>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -39,6 +32,6 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-
+<?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

@@ -8,7 +8,13 @@ function register_css_styles() {
     wp_register_style('bootstrap-theme', get_template_directory_uri() . '/css/bootstrap-theme.min.css', array(), '1.0.0', 'all');
     wp_enqueue_style('bootstrap-theme');
 
-    wp_register_style('main-css', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css'), 'all');
+	wp_register_style('stylesheet', get_template_directory_uri() . '/css/owl.carousel.css', array(), filemtime(get_template_directory() . '/css/owl.carousel.css'), 'all');
+	wp_enqueue_style('stylesheet');
+
+	wp_register_style('stylesheet', get_template_directory_uri() . '/css/owl.theme.default.css', array(), filemtime(get_template_directory() . '/css/owl.theme.default.css'), 'all');
+	wp_enqueue_style('stylesheet');
+
+	wp_register_style('main-css', get_template_directory_uri() . '/style.css', array(), filemtime(get_template_directory() . '/style.css'), 'all');
     wp_enqueue_style('main-css');
 }
 add_action('wp_enqueue_scripts', 'register_css_styles');
@@ -23,6 +29,10 @@ function register_js_scripts() {
 
     wp_register_script('custom-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0.0', true, filemtime(get_template_directory() . '/js/script.js'));
     wp_enqueue_script('custom-script');
+
+	wp_register_script('custom-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0.0', true, filemtime(get_template_directory() . '/js/script.js'));
+    wp_enqueue_script('custom-script');
+
 }
 add_action('wp_enqueue_scripts', 'register_js_scripts');
 
@@ -54,4 +64,24 @@ function my_theme_setup(){
 
 
 
+?>
+
+<?php
+/**
+ * Register our sidebars and google widgetized areas.
+ *
+ */
+function arphabet_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => 'Home right sidebar',
+		'id'            => 'home_right_1',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'arphabet_widgets_init' );
 ?>

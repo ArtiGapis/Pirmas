@@ -1,5 +1,28 @@
 jQuery( document ).ready(function() {
     // console.log( "ready!" );
+    $(document).ready(function(){
+
+        $(".owl-carousel").owlCarousel({
+            loop:true,
+            margin:10,
+            nav:false,
+            autoplay:true,
+            dots:false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:1
+                },
+                1000:{
+                    items:1
+                }
+            }
+        });
+    });
+
+
 });
 
 
@@ -26,7 +49,7 @@ jQuery( document ).ready(function() {
 
         $('#cssmenu>ul>li.menu-item-has-children>a').append('<span class="holder"></span>');
 
-        (function getColor() {
+      /*  (function getColor() {
             var r, g, b;
             var textColor = $('#cssmenu').css('color');
             textColor = textColor.slice(4);
@@ -46,7 +69,7 @@ jQuery( document ).ready(function() {
                 $('#cssmenu>ul>li>a>span').css('border-color', 'rgba(255, 255, 255, .35)');
             }
         })();
-
+*/
         function rgbToHsl(r, g, b) {
             r /= 255, g /= 255, b /= 255;
             var max = Math.max(r, g, b), min = Math.min(r, g, b);
