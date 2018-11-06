@@ -1,45 +1,106 @@
-# This is a template .gitignore file for git-managed WordPress projects.
-#
-# Fact: you don't want WordPress core files, or your server-specific
-# configuration files etc., in your project's repository. You just don't.
-#
-# Solution: stick this file up your repository root (which it assumes is
-# also the WordPress root directory) and add exceptions for any plugins,
-# themes, and other directories that should be under version control.
-#
-# See the comments below for more info on how to add exceptions for your
-# content. Or see git's documentation for more info on .gitignore files:
-# http://kernel.org/pub/software/scm/git/docs/gitignore.html
+kudos to - http://bigwilliam.com/gitignore-for-wordpress-projects/
 
-# CLEANING THE REPOSITORY
-# If you've added this .gitignore file in an existing repository, you may want to remove the content that should be ignored. Here is how to do that.
-# you can use a wildcard to remove all files, and then add all the files back, and then commit the updates.
+###############################################################################
+##                                                                            #
+##       GIT IGNORE FOR WORDPRESS SITES                                       #
+##       ------------------------------                                       #
+##       By: BigWilliam <hello@bigwilliam.com>                                #
+##       License: MIT - aka you can use/modify this how you want :)           #
+##                                                                            #
+###############################################################################
 
-# $ git commit -m "Pre Cleanup"
-# $ git rm -r --cached .
-# $ git add .
-# $ git commit -m ".gitignore setup and cleaned up"
+###############################################################################
+##                                                                            #
+##       NOTE: TO STOP TRACKING A FILE AFTER IGNORING IT,                     #
+##             USE THESE GIT COMMANDS:                                        #
+##                                                                            #
+##             git rm --cached <file>                                         #
+##             git add . # or git add <file>                                  #
+##                                                                            #
+###############################################################################
 
 
-# Ignore everything in the root except the "wp-content" directory.
+## OS and Utility Stuff ##
+
+#==================#
+#     OS Files     #
+#==================#
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+*[Tt]humbs.db
+*.Trashes
+
+
+#==================#
+#    Log files     #
+#==================#
+*.log
+error_log
+access_log
+.sass-cache
+
+
+#===================================#
+#       Config. and npm Files       #
+#===================================#
+local-config.php
+# wp-config.php
+node_modules
+
+
+
+## Main Stuff ##
+
+#===================================#
+#     WP Core, except content       #
+#===================================#
 /*
 !.gitignore
 !wp-content/
-!wp-config.php
+# !media/
+!favicon.ico
+!favicon.png
+!robots.txt
+!humans.txt
 
-# Ignore everything in the "wp-content" directory, except the "plugins"
-# and "themes" directories.
+#=============================================#
+#     wp-content, except plugins and themes   #
+#=============================================#
 wp-content/*
 !wp-content/plugins/
+!wp-content/mu-plugins/
 !wp-content/themes/
+# !wp-content/uploads ##=> It's a good idea to ignore uploads, especially if you are using git to deploy to live/dev environments. Un-comment this line to 'watch' uploads
 
-# Ignore everything in the "plugins" directory, except the plugins you
-# specify (see the commented-out examples for hints on how to do this.)
-wp-content/plugins/*
+
+## Use these to get more specific ##
+
+#===========================#
+#      Specific Plugins     #
+#===========================#
+# wp-content/plugins/*
 # !wp-content/plugins/my-single-file-plugin.php
 # !wp-content/plugins/my-directory-plugin/
 
-# Ignore everything in the "themes" directory, except the themes you
-# specify (see the commented-out example for a hint on how to do this.)
-wp-content/themes/*
+#===========================#
+#     Specific Themes       #
+#===========================#
+# wp-content/themes/*
 # !wp-content/themes/my-theme/
+
+
+
+
+## Depreciated stuff, keeping here for reference ##
+
+##### design files #####
+# *.psd
+
+##### CACHE #####
+# wp-content/cache/
+# wp-content/advanced-cache.php
+# wp-content/wp-cache-config.php
