@@ -1,5 +1,15 @@
 jQuery( document ).ready(function() {
     // console.log( "ready!" );
+
+
+
+});
+
+
+// cssmenu Small mobile menu
+( function( $ ) {
+
+
     $(document).ready(function(){
 
         $(".owl-carousel").owlCarousel({
@@ -23,11 +33,6 @@ jQuery( document ).ready(function() {
     });
 
 
-});
-
-
-// cssmenu Small mobile menu
-( function( $ ) {
     $( document ).ready(function() {
         $('#cssmenu li.menu-item-has-children>a').on('click', function(){
             $(this).removeAttr('href');
