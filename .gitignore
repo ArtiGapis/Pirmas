@@ -1,8 +1,35 @@
-alex$ git status
-# On branch master
-# Changes not staged for commit:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#   modified:   wp-config.php
-#
+# osx noise
+.DS_Store
+profile
+
+# svn & cvs
+.svn
+CVS
+
+# auto git version noise
+InfoPlist.h
+
+#project files
+*.esproj
+
+#wordpress config and uploaded files
+.htaccess
+wp-*.php
+xmlrpc.php
+wp-admin/
+wp-includes/
+wp-content/uploads/
+wp-content/blogs.dir/
+wp-content/upgrade/*
+wp-content/backup-db/*
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/cache/*
+wp-content/cache/supercache/*
+wp-content/w3tc/*
+sitemap.xml
+sitemap.xml.gz
+readme.html
+license.txt
+*.log
+wp-config.php
