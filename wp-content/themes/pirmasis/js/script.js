@@ -2,7 +2,7 @@ jQuery( document ).ready(function() {
     // console.log( "ready!" );
     $(document).ready(function(){
 
-        $(".owl-carousel").owlCarousel({
+        (".owl-carousel").owlCarousel({
             loop:true,
             margin:10,
             nav:false,
