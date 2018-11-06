@@ -36,7 +36,13 @@ function register_js_scripts() {
 }
 add_action('wp_enqueue_scripts', 'register_js_scripts');
 
+function my_theme_scripts_function() {
 
+	wp_enqueue_script( 'jquery', get_theme_file_uri('/js/jquery-3.3.1.min.js'), null, '1.0', true  );
+
+}
+
+add_action('wp_enqueue_scripts','my_theme_scripts_function');
 
 register_nav_menus( array(
     'main_navigation' => 'Main menu',
