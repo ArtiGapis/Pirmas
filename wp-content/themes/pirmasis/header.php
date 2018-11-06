@@ -3,21 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
         <title>
-            <?php if (is_home()) { echo bloginfo('name');
-            } elseif (is_front_page()) {
-                echo bloginfo('name');
-            } elseif (is_404()) {
-                _e("404 error nothing found", "itb");
-            } elseif (is_category()) {
-                _e("Category", "itb"); wp_title('');
-            } elseif (is_search()) {
-                _e("Search", "itb");
-            } elseif ( is_day() || is_month() || is_year() ) {
-                _e("Archive", "itb"); wp_title('');
-            } else {
-                echo wp_title('');
-            }
-            ?>
+	        <?php the_title(); ?>
         </title>
 		<meta name="description" content="<?php bloginfo('description') ?>" />
 		<?php if(is_search()) { ?>
@@ -28,8 +14,6 @@
 		<?php wp_head(); ?>
 
         <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/itbextra.css" media="screen" />
-
-
 
 	</head>
 
