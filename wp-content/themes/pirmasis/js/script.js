@@ -1,8 +1,5 @@
 jQuery( document ).ready(function() {
     // console.log( "ready!" );
-
-
-
 });
 
 
@@ -12,25 +9,21 @@ jQuery( document ).ready(function() {
 
     $(document).ready(function(){
 
-        $(".owl-carousel").owlCarousel({
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            items:4,
             loop:true,
             margin:10,
-            nav:false,
             autoplay:true,
-            dots:false,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:1
-                },
-                1000:{
-                    items:1
-                }
-            }
+            autoplayTimeout:1000,
+            autoplayHoverPause:true
         });
-    });
+        $('.play').on('click',function(){
+            owl.trigger('play.owl.autoplay',[1000])
+        })
+        $('.stop').on('click',function(){
+            owl.trigger('stop.owl.autoplay')
+        })    });
 
 
     $( document ).ready(function() {

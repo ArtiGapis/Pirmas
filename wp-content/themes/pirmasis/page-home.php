@@ -16,17 +16,8 @@ get_header(); ?>
                 </div>
                 <div class="col-md-10 container-white">
 					<div class="rte">
-                        <div id="wrap-page">
-                            <div class="post-wrap">
-                                <div class="rte">
-                                    <div class="owl-carousel owl-theme">
-                                        <div class="item"><img src="<?php bloginfo('template_directory'); ?>/images/bekas1.jpg"></div>
-                                        <div class="item"><img src="<?php bloginfo('template_directory'); ?>/images/bekas2.jpg"></div>
-                                    </div>
-		                            <?php the_content(); ?>
-                                </div>
-                            </div>
-                        </div>
+						<?php the_content(); ?>
+
                     </div>
                 </div>
 			</div>

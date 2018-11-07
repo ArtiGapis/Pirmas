@@ -31,15 +31,11 @@ $pilkas: rgb(179, 179, 179);
 
                                                       /* owl-carousel */
 
-.owl-carousel .owl-nav button.owl-prev,
-.owl-carousel .owl-nav button.owl-next,
-.owl-carousel button.owl-dot {
-  background-color: rgba(255, 255, 255, 0.42);
-}
 .owl-carousel .owl-item img {
   display: block;
-  width: 50%;
-  margin-left: calc( 50% - 250px);
+  height: 40px;
+  width: auto;
+  margin-left: 10px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -49,18 +45,14 @@ $pilkas: rgb(179, 179, 179);
   top:50%;
   width: 100%;
 }
-.bekas1{
-  background-image: url("images/bekas1.jpg");
-}
 
                                                       /* GLOBAL PAGE STYLES */
-body{
-  background-image: url("images/bekas1.jpg");
-  background-size: 100%;
+.header-wraper{
+  background: url("images/header.jpg");
+  height: 200px;
 }
 .container-white {
-  background-color:$pilkas;
-  border:1px solid black;
+  border:2px solid black;
   border-radius: 10px;
   margin-top:20px;
 }
@@ -81,35 +73,35 @@ footer {
 nav {
   width: 100%;
 }
+.footer-text-wraper{
+  color: white;
+}
                                                       /*postas*/
 #wrap-page {
   width: 100%;
 }
                                                       /* hederis */
-.header-title-post{
+.header-runing-text {
   font-size: 45px;
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-weight: bold;
   font-style: italic;
-  color: #a3a3a3;
   height: 50px;
-  background-color:$pilkas;
+  margin-top: 150px;
+
 }
 nav.navbar.navbar-default.pull-right {
   margin-top: 20px;
 
 }                                                  /*sub meniu css*/
 .sub-menu {
-   background: rgb(255, 255, 255);
+   background: white;
    min-width: 130px;
    padding: 15px;
    display: none;
    z-index: 10;
 list-style-type: none;
 
-}
-.show-desctop{
-  background-color: $pilkas;
 }
 .sidebar-wraper {
 margin-bottom: 102px;

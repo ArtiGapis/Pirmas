@@ -43,8 +43,10 @@ register_nav_menus( array(
 
 ));
 
+
 add_theme_support( 'post-thumbnails' );
 add_image_size("first-size", 10, 10, true );
+add_image_size("home-list", 400, 250, true );
 
 function pw_show_image_sizes($sizes) {
     $sizes['first-size'] = __( 'First size 10x10', 'itb' );
