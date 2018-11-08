@@ -8,7 +8,6 @@ jQuery( document ).ready(function() {
 
 
     $(document).ready(function(){
-
         var owl = $('.owl-carousel');
         owl.owlCarousel({
             items:4,
@@ -20,11 +19,11 @@ jQuery( document ).ready(function() {
         });
         $('.play').on('click',function(){
             owl.trigger('play.owl.autoplay',[1000])
-        })
+        });
         $('.stop').on('click',function(){
             owl.trigger('stop.owl.autoplay')
-        })    });
-
+        })
+    });
 
     $( document ).ready(function() {
         $('#cssmenu li.menu-item-has-children>a').on('click', function(){

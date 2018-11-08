@@ -26,17 +26,8 @@ Author URI:
 
 /* owl-carousel */
 .owl-carousel .owl-item img {
-  display: block;
   height: 40px;
-  width: auto;
-  margin-left: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px; }
-
-.owl-nav {
-  position: absolute;
-  top: 50%;
-  width: 100%; }
+  width: auto; }
 
 /* GLOBAL PAGE STYLES */
 .header-wraper {
@@ -46,7 +37,8 @@ Author URI:
 .container-white {
   border: 2px solid black;
   border-radius: 10px;
-  margin-top: 20px; }
+  margin: 20px 0 20px 0;
+  padding: 20px; }
 
 footer {
   background: #000;
@@ -80,6 +72,21 @@ nav {
 
 nav.navbar.navbar-default.pull-right {
   margin-top: 20px; }
+
+/*right menu*/
+.right-menu-wraper {
+  border: 1px solid #bfbfbf;
+  background-color: #f1f1f1;
+  padding: 5px;
+  margin: 20px 0 20px 0;
+  border-radius: 5px; }
+  .right-menu-wraper .menu-title {
+    text-align: center;
+    color: black;
+    padding: 10px; }
+  .right-menu-wraper img.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+    width: 100%;
+    height: 100%; }
 
 /*sub meniu css*/
 .sub-menu {

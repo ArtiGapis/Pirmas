@@ -6,7 +6,8 @@
 			$args = array( 'post_type' => 'logo', 'posts_per_page' => 9999 );
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                <div ><?php the_post_thumbnail(); ?>
+                <div >
+                    <a href="<?php echo(types_render_field( 'nuoroda')); ?>"><?php the_post_thumbnail(); ?></a>
                 </div>
 				<?php $i++; endwhile; wp_reset_postdata(); ?>
         </div>
