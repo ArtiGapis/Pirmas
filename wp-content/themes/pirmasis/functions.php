@@ -45,8 +45,7 @@ register_nav_menus( array(
 
 
 add_theme_support( 'post-thumbnails' );
-add_image_size("first-size", 10, 10, true );
-add_image_size("home-list", 400, 250, true );
+add_image_size("icon-list", 400, 250, true );
 
 function pw_show_image_sizes($sizes) {
     $sizes['first-size'] = __( 'First size 10x10', 'itb' );
@@ -62,7 +61,11 @@ function my_theme_setup(){
     load_theme_textdomain('itb', get_template_directory() . '/languages');
 }
 
+add_filter('single_add_to_cart_text', 'woo_custom_cart_button_text');
 
+function woo_custom_cart_button_text() {
+	return __('Pirkti', 'woocommerce');
+}
 
 
 ?>

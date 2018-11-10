@@ -18,15 +18,17 @@ get_header(); ?>
                     <div class="rte">
                         <div id="wrap-page">
                             <div class="post-wrap">
-                                <div class="rte">
+                                <div class="forum-wrap">
 	                                <?php
 	                                global $post;
 	                                $args = array( 'posts_per_page' => 3 );
 	                                $lastposts = get_posts( $args );
 	                                foreach ( $lastposts as $post ) :
 		                                setup_postdata( $post ); ?>
-                                        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-		                                <?php the_content(); ?>
+                                    <div class="news-wraper">
+                                        <h2><?php the_title(); ?></h2>
+                                        <a href="<?php the_permalink(); ?>"> Plačiau>>>> </a>
+                                    </div>
 	                                <?php endforeach;
 	                                wp_reset_postdata(); ?>
                                 </div>

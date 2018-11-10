@@ -7,6 +7,7 @@ Author URI:
 */
 $pilkas: rgb(179, 179, 179);
 
+
                                                     /* contact */
 
 .name-wraper input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required,.name-wraper input.wpcf7-form-control.wpcf7-text {
@@ -27,6 +28,21 @@ $pilkas: rgb(179, 179, 179);
 }
 .col-md-10.container-white {
   padding: 20px;
+}
+
+                                                    /* forum */
+
+.forum-wrap{
+  .news-wraper {
+    border-bottom: 2px solid black;
+    margin:10px;
+    padding: 10px;
+    a{
+      line-height: 0;
+      float: right;
+      font-size: 20px;
+    }
+  }
 }
 
                                                       /* owl-carousel */
@@ -323,24 +339,24 @@ color: $pilkas;
 }
 
 @media screen and (max-width: 992px) {
-  .sub-menu {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.52);
-  }
-  .container-white {
-    margin-top:80px;
-  }
-
 }
 
 @media screen and (max-width: 768px) {
-.show-desctop {
-  display: none !important;
-}
+  .container-white {
+    margin: 90px 0 20px 0;
+    padding: 20px
+  }
+  .img-responsive{
+    visibility: hidden;
+  }
 
-.show-mobile {
-  display: block !important;
-}
+    .show-desctop {
+    display: none !important;
+  }
+
+  .show-mobile {
+    display: block !important;
+  }
 }
 
 @media screen and (max-width: 480px) {

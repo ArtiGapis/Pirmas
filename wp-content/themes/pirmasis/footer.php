@@ -1,4 +1,3 @@
-
 		<?php wp_footer();?>
         <div class="owl-carousel owl-theme">
 			<?php
@@ -7,14 +6,12 @@
 			$loop = new WP_Query( $args );
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
                 <div >
-                    <a href="<?php echo(types_render_field( 'nuoroda')); ?>"><?php the_post_thumbnail(); ?></a>
+                    <?php the_post_thumbnail(); ?>
                 </div>
-				<?php $i++; endwhile; wp_reset_postdata(); ?>
+
+				<?php $i++; endwhile; wp_reset_postdata("icon-list"); ?>
         </div>
-
-
         <footer>
-
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -22,8 +19,6 @@
                     </div>
                 </div>
             </div>
-
         </footer>
-
 	</body>
 </html>

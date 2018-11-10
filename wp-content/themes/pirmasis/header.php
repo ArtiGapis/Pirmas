@@ -12,11 +12,7 @@
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<?php wp_head(); ?>
-
-        <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/itbextra.css" media="screen" />
-
 	</head>
-
 
     <body <?php body_class( $class ); ?>>
     <header class="header-wraper">

@@ -24,6 +24,16 @@ Author URI:
 .col-md-10.container-white {
   padding: 20px; }
 
+/* forum */
+.forum-wrap .news-wraper {
+  border-bottom: 2px solid black;
+  margin: 10px;
+  padding: 10px; }
+  .forum-wrap .news-wraper a {
+    line-height: 0;
+    float: right;
+    font-size: 20px; }
+
 /* owl-carousel */
 .owl-carousel .owl-item img {
   height: 40px;
@@ -275,14 +285,14 @@ nav.navbar.navbar-default.pull-right {
 .navbar-default .navbar-nav > li > a {
   color: black; }
 
-@media screen and (max-width: 992px) {
-  .sub-menu {
-    position: absolute;
-    background: rgba(255, 255, 255, 0.52); }
-
-  .container-white {
-    margin-top: 80px; } }
 @media screen and (max-width: 768px) {
+  .container-white {
+    margin: 90px 0 20px 0;
+    padding: 20px; }
+
+  .img-responsive {
+    visibility: hidden; }
+
   .show-desctop {
     display: none !important; }
 

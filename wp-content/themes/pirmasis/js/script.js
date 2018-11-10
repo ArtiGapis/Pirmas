@@ -1,7 +1,8 @@
 jQuery( document ).ready(function() {
     // console.log( "ready!" );
 });
-
+varda=(5>5)?'jonas':"antanas";
+console.log(varda=(5>5)?'jonas':"antanas");
 
 // cssmenu Small mobile menu
 ( function( $ ) {
