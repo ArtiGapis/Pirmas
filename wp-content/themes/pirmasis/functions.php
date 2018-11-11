@@ -1,5 +1,28 @@
 <?php
 
+function theme_xyz_header_metadata() {
+
+	// Post object if needed
+	// global $post;
+
+	// Page conditional if needed
+	// if( is_page() ){}
+
+	?>
+	<meta charset="UTF-8" />
+	<meta name="description" content="<?php bloginfo('description') ?>" />
+	<?php if(is_search()) { ?>
+		<meta name="robots" content="noindex, nofollow" />
+	<?php }?>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<meta name="abc" content="xyz" />
+
+	<?php
+
+}
+add_action( 'wp_head', 'theme_xyz_header_metadata' );
+
 /* Register Css media */
 function register_css_styles() {
     wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '1.0.0', 'all');
@@ -48,7 +71,7 @@ add_theme_support( 'post-thumbnails' );
 add_image_size("icon-list", 400, 250, true );
 
 function pw_show_image_sizes($sizes) {
-    $sizes['first-size'] = __( 'First size 10x10', 'itb' );
+    $sizes['first-size'] = __( 'First size 400x250', 'itb' );
     return $sizes;
 }
 add_filter('image_size_names_choose', 'pw_show_image_sizes');
@@ -61,11 +84,10 @@ function my_theme_setup(){
     load_theme_textdomain('itb', get_template_directory() . '/languages');
 }
 
-add_filter('single_add_to_cart_text', 'woo_custom_cart_button_text');
 
-function woo_custom_cart_button_text() {
-	return __('Pirkti', 'woocommerce');
-}
+
+
+
 
 
 ?>

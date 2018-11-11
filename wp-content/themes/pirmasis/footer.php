@@ -7,6 +7,7 @@
 			while ( $loop->have_posts() ) : $loop->the_post(); ?>
                 <div >
                     <?php the_post_thumbnail(); ?>
+
                 </div>
 
 				<?php $i++; endwhile; wp_reset_postdata("icon-list"); ?>

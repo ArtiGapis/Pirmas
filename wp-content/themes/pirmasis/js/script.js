@@ -1,8 +1,6 @@
 jQuery( document ).ready(function() {
     // console.log( "ready!" );
 });
-varda=(5>5)?'jonas':"antanas";
-console.log(varda=(5>5)?'jonas':"antanas");
 
 // cssmenu Small mobile menu
 ( function( $ ) {
@@ -11,7 +9,7 @@ console.log(varda=(5>5)?'jonas':"antanas");
     $(document).ready(function(){
         var owl = $('.owl-carousel');
         owl.owlCarousel({
-            items:4,
+            items:8,
             loop:true,
             margin:10,
             autoplay:true,
